@@ -206,3 +206,27 @@ footer { line-height: 1.6; }
 .review-item span { margin-left:10px; }
 .review-item p { margin:7px 0 0; }
 @media (max-width: 760px) { .product-detail { grid-template-columns:1fr; gap:20px; } .product-detail-media { min-height:280px; } }
+
+/* ---------------- Direct Order Now checkout ---------------- */
+.checkout-layout{display:grid;grid-template-columns:minmax(280px,0.8fr) minmax(320px,1.2fr);gap:22px;align-items:start;}
+.checkout-product{display:flex;gap:16px;align-items:center;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line);}
+.checkout-product-image{width:110px;height:110px;border-radius:14px;background:#f7f7f7;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none;}
+.checkout-product-image img{width:100%;height:100%;object-fit:contain;}
+.checkout-product-image span{font-size:48px;}
+.checkout-product h3{margin:8px 0;font-size:18px;}
+.qty-selector{display:flex;align-items:center;width:max-content;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;}
+.qty-selector button{width:42px;height:42px;border:0;background:#fff;font-size:20px;cursor:pointer;}
+.qty-selector button:disabled{color:#aaa;cursor:not-allowed;}
+.qty-selector input{width:58px;height:42px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);text-align:center;font-weight:700;font-size:15px;}
+.checkout-total{font-size:20px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line);}
+.payment-note{background:var(--accent-blue-soft);padding:14px;border-radius:12px;line-height:1.55;font-size:13px;}
+.agreement-check{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.5;margin:16px 0;}
+.agreement-check input{margin-top:3px;flex:none;}
+.agreement-check a{font-weight:700;color:var(--ink);}
+.checkout-submit{margin-top:6px;padding:13px 18px;}
+.policy-page{max-width:900px;margin:24px auto;line-height:1.7;}
+.policy-page h1{margin-top:0;font-size:clamp(26px,4vw,38px);}
+.policy-page h3{margin-top:28px;margin-bottom:7px;}
+.policy-page p{color:var(--ink-soft);}
+.policy-contact{margin-top:30px;padding:16px;border:1px solid var(--line);border-radius:12px;}
+@media (max-width:760px){.checkout-layout{grid-template-columns:1fr;}.checkout-product-image{width:90px;height:90px;}.checkout-page>.btn.ghost{margin-bottom:8px;}}
