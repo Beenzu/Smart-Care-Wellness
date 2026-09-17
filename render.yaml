@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: godwyn-stores
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SETUP_KEY
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: CRM_WEBHOOK_URL
+        sync: false
+      - key: CRM_API_KEY
+        sync: false
+    disk:
+      name: godwyn-data
+      mountPath: /var/data
+      sizeGB: 1
